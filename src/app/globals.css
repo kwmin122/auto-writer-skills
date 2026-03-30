@@ -245,6 +245,16 @@ h2 {
   gap: 1rem;
 }
 
+.hero-side-note {
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+  padding: 1rem;
+}
+
 .preview-row {
   background: var(--accent-soft);
   border-radius: 18px;
@@ -256,9 +266,112 @@ h2 {
   padding: 1rem;
 }
 
+.workspace-panel {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.workspace-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+}
+
+.workspace-form,
+.workspace-results,
+.question-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.workspace-card,
+.empty-state-card {
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.workspace-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: space-between;
+}
+
+.compact-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.source-item-list,
+.supporting-points {
+  display: grid;
+  gap: 0.85rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.source-item-card {
+  background: rgba(255, 252, 245, 0.86);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  display: grid;
+  gap: 0.55rem;
+  padding: 0.95rem 1rem;
+}
+
+.source-item-header {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.source-item-excerpt {
+  line-height: 1.6;
+  margin: 0;
+}
+
+.supporting-points li {
+  background: rgba(142, 93, 47, 0.08);
+  border-radius: 16px;
+  line-height: 1.6;
+  padding: 0.9rem 1rem;
+}
+
+.status-badge {
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+}
+
+.status-badge-ready {
+  background: rgba(36, 95, 43, 0.12);
+  color: #245f2b;
+}
+
+.status-badge-needs_context {
+  background: rgba(141, 47, 37, 0.12);
+  color: #8d2f25;
+}
+
+.secondary-button {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  padding: 0.95rem 1.4rem;
+}
+
 @media (max-width: 900px) {
   .hero-panel,
   .content-grid,
+  .workspace-grid,
   .field-grid,
   .form-footer {
     grid-template-columns: 1fr;

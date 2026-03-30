@@ -30,7 +30,11 @@ export function WriterProfileForm({ profile }: WriterProfileFormProps) {
         .split(",")
         .map((item) => item.trim())
         .filter(Boolean),
-      writingNotes: String(formData.get("writingNotes") ?? "")
+      writingNotes: String(formData.get("writingNotes") ?? ""),
+      editPreferences: String(formData.get("editPreferences") ?? "")
+        .split(/\n|,/g)
+        .map((item) => item.trim())
+        .filter(Boolean)
     };
 
     const response = await fetch("/api/profile", {
@@ -102,10 +106,20 @@ export function WriterProfileForm({ profile }: WriterProfileFormProps) {
         />
       </label>
 
+      <label className="field">
+        <span>Edit memory</span>
+        <textarea
+          defaultValue={profile.editPreferences.join("\n")}
+          name="editPreferences"
+          rows={4}
+        />
+      </label>
+
       <div className="form-footer">
         <p className="helper-text">
           The saved profile becomes the default style context for later generation
-          phases.
+          phases. Add one reusable edit preference per line if you want to tune the
+          memory manually.
         </p>
         <button className="primary-button" disabled={status === "saving"} type="submit">
           {status === "saving" ? "Saving..." : "Save profile"}

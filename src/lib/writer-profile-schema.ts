@@ -16,7 +16,8 @@ export const writerProfileSchema = z.object({
   defaultOutput: z.enum(outputTargets),
   defaultTone: z.enum(toneOptions),
   bannedMarkers: z.array(bannedMarkerSchema).max(10),
-  writingNotes: z.string().trim().max(400)
+  writingNotes: z.string().trim().max(400),
+  editPreferences: z.array(z.string().trim().min(1)).max(12)
 });
 
 export type WriterProfile = z.infer<typeof writerProfileSchema>;
@@ -27,7 +28,8 @@ export function getDefaultWriterProfile(): WriterProfile {
     defaultOutput: "linkedin",
     defaultTone: "professional",
     bannedMarkers: ["**", "emoji"],
-    writingNotes: "Keep the language direct, natural, and grounded in sources."
+    writingNotes: "Keep the language direct, natural, and grounded in sources.",
+    editPreferences: []
   };
 }
 
@@ -43,6 +45,7 @@ export function normalizeWriterProfileInput(
   const defaultTone = object.defaultTone;
   const bannedMarkers = object.bannedMarkers;
   const writingNotes = object.writingNotes;
+  const editPreferences = object.editPreferences;
 
   return writerProfileSchema.parse({
     displayName:
@@ -57,6 +60,9 @@ export function normalizeWriterProfileInput(
     writingNotes:
       typeof writingNotes === "string"
         ? writingNotes
-        : defaults.writingNotes
+        : defaults.writingNotes,
+    editPreferences: Array.isArray(editPreferences)
+      ? editPreferences
+      : defaults.editPreferences
   });
 }

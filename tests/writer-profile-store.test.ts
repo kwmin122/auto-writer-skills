@@ -28,7 +28,8 @@ describe("writer profile store", () => {
         defaultOutput: "linkedin",
         defaultTone: "insight-driven",
         bannedMarkers: ["**", "emoji"],
-        writingNotes: "Keep the language direct and cite sources."
+        writingNotes: "Keep the language direct and cite sources.",
+        editPreferences: ["Prefer shorter drafts."]
       },
       storePath
     );
@@ -40,7 +41,8 @@ describe("writer profile store", () => {
       defaultOutput: "linkedin",
       defaultTone: "insight-driven",
       bannedMarkers: ["**", "emoji"],
-      writingNotes: "Keep the language direct and cite sources."
+      writingNotes: "Keep the language direct and cite sources.",
+      editPreferences: ["Prefer shorter drafts."]
     });
   });
 });

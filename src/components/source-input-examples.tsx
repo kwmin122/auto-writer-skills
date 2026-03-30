@@ -14,7 +14,7 @@ const sourceExamples = [
   },
   {
     label: "GitHub",
-    example: "kwmin122/auto-writer-skills"
+    example: "https://github.com/kwmin122/auto-writer-skills"
   },
   {
     label: "Paper",

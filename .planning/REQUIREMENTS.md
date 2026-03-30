@@ -7,30 +7,30 @@
 
 ### Intake
 
-- [ ] **INPT-01**: User can start a writing session by mixing freeform text, notes, drafts, and links in one request
-- [ ] **INPT-02**: User sees example inputs for text, URL, YouTube, GitHub, and paper links before submitting
-- [ ] **INPT-03**: System identifies each input item type and indicates whether it was parsed successfully
-- [ ] **INPT-04**: If a source cannot be read, system asks the user for missing context instead of failing silently
+- [x] **INPT-01**: User can start a writing session by mixing freeform text, notes, drafts, and links in one request
+- [x] **INPT-02**: User sees example inputs for text, URL, YouTube, GitHub, and paper links before submitting
+- [x] **INPT-03**: System identifies each input item type and indicates whether it was parsed successfully
+- [x] **INPT-04**: If a source cannot be read, system asks the user for missing context instead of failing silently
 
 ### Reconstruction
 
-- [ ] **RECO-01**: System proposes one core message and 3-5 supporting points before writing the final draft
-- [ ] **RECO-02**: System asks at most four targeted follow-up questions only when the provided material is insufficient
-- [ ] **RECO-03**: User can confirm or adjust the proposed direction before final generation
+- [x] **RECO-01**: System proposes one core message and 3-5 supporting points before writing the final draft
+- [x] **RECO-02**: System asks at most four targeted follow-up questions only when the provided material is insufficient
+- [x] **RECO-03**: User can confirm or adjust the proposed direction before final generation
 
 ### Output
 
-- [ ] **OUTP-01**: User can choose LinkedIn post or blog post as the target format
-- [ ] **OUTP-02**: User can choose a tone from a predefined list including professional, insight-driven, story-driven, casual, and persuasive
-- [ ] **OUTP-03**: Generated draft reads like natural human writing and does not use markdown emphasis markers, emojis, or obvious AI filler language
-- [ ] **OUTP-04**: Generated draft preserves source attribution for external facts, references, and quoted ideas
-- [ ] **OUTP-05**: User can request a rewrite with short instructions such as "shorter", "sharper", or "more like me"
+- [x] **OUTP-01**: User can choose LinkedIn post or blog post as the target format
+- [x] **OUTP-02**: User can choose a tone from a predefined list including professional, insight-driven, story-driven, casual, and persuasive
+- [x] **OUTP-03**: Generated draft reads like natural human writing and does not use markdown emphasis markers, emojis, or obvious AI filler language
+- [x] **OUTP-04**: Generated draft preserves source attribution for external facts, references, and quoted ideas
+- [x] **OUTP-05**: User can request a rewrite with short instructions such as "shorter", "sharper", or "more like me"
 
 ### Personalization
 
-- [ ] **PERS-01**: User can save a basic writer profile including name, preferred tone, and writing preferences
-- [ ] **PERS-02**: System stores recurring edit preferences from the user's revisions
-- [ ] **PERS-03**: Future drafts reflect the saved profile and edit memory by default
+- [x] **PERS-01**: User can save a basic writer profile including name, preferred tone, and writing preferences
+- [x] **PERS-02**: System stores recurring edit preferences from the user's revisions
+- [x] **PERS-03**: Future drafts reflect the saved profile and edit memory by default
 
 ## v2 Requirements
 
@@ -59,21 +59,21 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PERS-01 | Phase 1 | Pending |
-| INPT-02 | Phase 1 | Pending |
-| INPT-01 | Phase 2 | Pending |
-| INPT-03 | Phase 2 | Pending |
-| INPT-04 | Phase 2 | Pending |
-| RECO-01 | Phase 3 | Pending |
-| RECO-02 | Phase 3 | Pending |
-| RECO-03 | Phase 3 | Pending |
-| OUTP-01 | Phase 4 | Pending |
-| OUTP-02 | Phase 4 | Pending |
-| OUTP-03 | Phase 4 | Pending |
-| OUTP-04 | Phase 4 | Pending |
-| OUTP-05 | Phase 4 | Pending |
-| PERS-02 | Phase 5 | Pending |
-| PERS-03 | Phase 5 | Pending |
+| PERS-01 | Phase 1 | Complete |
+| INPT-02 | Phase 1 | Complete |
+| INPT-01 | Phase 2 | Complete |
+| INPT-03 | Phase 2 | Complete |
+| INPT-04 | Phase 2 | Complete |
+| RECO-01 | Phase 3 | Complete |
+| RECO-02 | Phase 3 | Complete |
+| RECO-03 | Phase 3 | Complete |
+| OUTP-01 | Phase 4 | Complete |
+| OUTP-02 | Phase 4 | Complete |
+| OUTP-03 | Phase 4 | Complete |
+| OUTP-04 | Phase 4 | Complete |
+| OUTP-05 | Phase 4 | Complete |
+| PERS-02 | Phase 5 | Complete |
+| PERS-03 | Phase 5 | Complete |
 
 **Coverage:**
 - v1 requirements: 15 total
@@ -82,4 +82,4 @@
 
 ---
 *Requirements defined: 2026-03-30*
-*Last updated: 2026-03-30 after initial definition*
+*Last updated: 2026-03-30 after v1 execution and verification*

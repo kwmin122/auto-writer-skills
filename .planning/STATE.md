@@ -5,33 +5,37 @@
 See: .planning/PROJECT.md (updated 2026-03-30)
 
 **Core value:** 링크 몇 개와 짧은 메모만으로도 출처가 남고 사용자다운 플랫폼 맞춤 글을 빠르게 완성한다.
-**Current focus:** Phase 2 - Source Intake and Normalization
+**Current focus:** v1 complete - ready for next milestone planning
 
 ## Current Position
 
-Phase: 2 of 5 (Source Intake and Normalization)
-Plan: 0 of 3 in current phase
-Status: Ready to plan
-Last activity: 2026-03-30 — Phase 1 executed and verified
+Phase: 5 of 5 (Personal Memory and Rewrite Loop)
+Plan: All roadmap plans completed
+Status: Complete and verified
+Last activity: 2026-03-30 — Phases 2-5 implemented, verified, and ready to ship
 
-Progress: [██░░░░░░░░] 17%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 40 min
-- Total execution time: 1.3 hours
+- Total plans completed: 12
+- Average duration: 20 min
+- Total execution time: 4.1 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1 | 2 | 80 min | 40 min |
+| 2 | 3 | 55 min | 18 min |
+| 3 | 2 | 40 min | 20 min |
+| 4 | 3 | 45 min | 15 min |
+| 5 | 2 | 25 min | 12 min |
 
 **Recent Trend:**
-- Last 5 plans: 45 min, 35 min
-- Trend: Stable
+- Last 5 plans: 20 min, 18 min, 22 min, 15 min, 10 min
+- Trend: Faster as the core model stabilized
 
 ## Accumulated Context
 
@@ -44,19 +48,20 @@ Recent decisions affecting current work:
 - Initialization: Source attribution is mandatory in generated output
 - Initialization: Personalization starts in v1 through profile and edit memory
 - Phase 1: Single-user profile persistence uses an app-owned local store, not a hosted backend
-- Phase 1: The home screen previews future flow without faking source parsing
+- Phase 2-4: Source parsing and drafting run through local app routes with shared contracts and deterministic fallback behavior
+- Phase 5: Edit-memory is stored as lightweight reusable preferences, not opaque long-term summaries
 
 ### Pending Todos
 
-None yet.
+- Optional live model provider integration
+- External skill trigger entrypoint for link-only invocation
 
 ### Blockers/Concerns
 
-- Phase 2 should keep source extraction lightweight and degrade gracefully on unreadable links
-- Phase 4 still needs explicit generation guardrails for source attribution and anti-AI-tone rules
+- The current draft path is heuristic. Real model-backed generation is the next milestone if higher-quality prose becomes necessary.
 
 ## Session Continuity
 
-Last session: 2026-03-30 22:32 KST
-Stopped at: Phase 1 implementation verified and ready for Phase 2 planning
+Last session: 2026-03-30 08:14 KST
+Stopped at: v1 execution verified, roadmap closed, ready for commit and next milestone definition
 Resume file: None

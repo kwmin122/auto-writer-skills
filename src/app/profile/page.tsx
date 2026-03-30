@@ -11,8 +11,8 @@ export default async function ProfilePage() {
           <p className="eyebrow">Profile</p>
           <h1>Set the defaults the writing flow should carry forward.</h1>
           <p className="lead">
-            Save the baseline name, tone, output target, and style guardrails the
-            app should apply before later phases start rewriting content.
+            Save the baseline name, tone, output target, style guardrails, and
+            reusable edit-memory notes the app should apply before drafting.
           </p>
         </div>
 

@@ -29,6 +29,14 @@ export function ProfileSummaryCard({ profile }: ProfileSummaryCardProps) {
           <dt>Writing notes</dt>
           <dd>{profile.writingNotes}</dd>
         </div>
+        <div>
+          <dt>Edit memory</dt>
+          <dd>
+            {profile.editPreferences.length > 0
+              ? profile.editPreferences.join(" | ")
+              : "No saved edit preferences yet."}
+          </dd>
+        </div>
       </dl>
     </section>
   );

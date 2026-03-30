@@ -20,6 +20,17 @@ function parseBannedMarkers(value: FormDataEntryValue | null): string[] {
     .filter(Boolean);
 }
 
+function parseEditPreferences(value: FormDataEntryValue | null): string[] {
+  if (typeof value !== "string") {
+    return [];
+  }
+
+  return value
+    .split(/\n|,/g)
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
 async function parseRequestBody(request: Request): Promise<WriterProfile> {
   const contentType = request.headers.get("content-type") ?? "";
 
@@ -34,7 +45,8 @@ async function parseRequestBody(request: Request): Promise<WriterProfile> {
     defaultOutput: formData.get("defaultOutput"),
     defaultTone: formData.get("defaultTone"),
     bannedMarkers: parseBannedMarkers(formData.get("bannedMarkers")),
-    writingNotes: formData.get("writingNotes")
+    writingNotes: formData.get("writingNotes"),
+    editPreferences: parseEditPreferences(formData.get("editPreferences"))
   });
 }
 

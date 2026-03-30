@@ -10,11 +10,11 @@
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Product Shell and Writer Profile** - 첫 사용자가 즉시 써볼 수 있는 기본 흐름과 개인 프로필 토대를 만든다
-- [ ] **Phase 2: Source Intake and Normalization** - 메모와 여러 링크를 글 재료로 정리하는 입력 계층을 만든다
-- [ ] **Phase 3: Core Message and Clarifying Questions** - 글쓰기 전에 방향을 잡는 재구성 흐름을 만든다
-- [ ] **Phase 4: Draft Generation with Source Rules** - 플랫폼별 출력과 인간다운 문체 규칙, 출처 표기를 완성한다
-- [ ] **Phase 5: Personal Memory and Rewrite Loop** - 수정 습관을 학습해 다음 초안에 반영하는 개인화 루프를 만든다
+- [x] **Phase 1: Product Shell and Writer Profile** - 첫 사용자가 즉시 써볼 수 있는 기본 흐름과 개인 프로필 토대를 만든다
+- [x] **Phase 2: Source Intake and Normalization** - 메모와 여러 링크를 글 재료로 정리하는 입력 계층을 만든다
+- [x] **Phase 3: Core Message and Clarifying Questions** - 글쓰기 전에 방향을 잡는 재구성 흐름을 만든다
+- [x] **Phase 4: Draft Generation with Source Rules** - 플랫폼별 출력과 인간다운 문체 규칙, 출처 표기를 완성한다
+- [x] **Phase 5: Personal Memory and Rewrite Loop** - 수정 습관을 학습해 다음 초안에 반영하는 개인화 루프를 만든다
 
 ## Phase Details
 
@@ -29,8 +29,8 @@
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: Define the core session model, onboarding copy, and writer profile fields
-- [ ] 01-02: Build the first-screen flow with input examples and basic state handling
+- [x] 01-01: Define the core session model, onboarding copy, and writer profile fields
+- [x] 01-02: Build the first-screen flow with input examples and basic state handling
 
 ### Phase 2: Source Intake and Normalization
 **Goal**: 다양한 입력을 받아 읽을 수 있는 글 재료로 정리하고, 실패 시 보완 경로를 제공한다
@@ -43,9 +43,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: Implement mixed-input capture and source item classification
-- [ ] 02-02: Normalize extracted material into a shared internal writing-material structure
-- [ ] 02-03: Add graceful fallback for unreadable or unsupported sources
+- [x] 02-01: Implement mixed-input capture and source item classification
+- [x] 02-02: Normalize extracted material into a shared internal writing-material structure
+- [x] 02-03: Add graceful fallback for unreadable or unsupported sources
 
 ### Phase 3: Core Message and Clarifying Questions
 **Goal**: 글 생성 전에 핵심 메시지와 보완 질문 흐름을 통해 재구성 방향을 잡는다
@@ -58,8 +58,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: Design the material-to-message summarization step for reconstruction planning
-- [ ] 03-02: Implement the follow-up question policy and confirmation step
+- [x] 03-01: Design the material-to-message summarization step for reconstruction planning
+- [x] 03-02: Implement the follow-up question policy and confirmation step
 
 ### Phase 4: Draft Generation with Source Rules
 **Goal**: LinkedIn과 블로그 형식에 맞는 결과를 생성하고, 출처와 문체 규칙을 일관되게 지킨다
@@ -73,9 +73,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: Build prompt and template logic for LinkedIn and blog outputs
-- [ ] 04-02: Enforce style constraints for human-like prose and banned output patterns
-- [ ] 04-03: Add source attribution formatting and lightweight rewrite controls
+- [x] 04-01: Build prompt and template logic for LinkedIn and blog outputs
+- [x] 04-02: Enforce style constraints for human-like prose and banned output patterns
+- [x] 04-03: Add source attribution formatting and lightweight rewrite controls
 
 ### Phase 5: Personal Memory and Rewrite Loop
 **Goal**: 사용자의 수정 패턴을 저장하고 다음 결과에 반영하는 가벼운 개인화 루프를 완성한다
@@ -88,8 +88,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 05-01: Define edit-memory rules for capturing useful personalization signals
-- [ ] 05-02: Apply stored memory to future generations and expose simple memory controls
+- [x] 05-01: Define edit-memory rules for capturing useful personalization signals
+- [x] 05-02: Apply stored memory to future generations and expose simple memory controls
 
 ## Progress
 
@@ -98,8 +98,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Product Shell and Writer Profile | 0/2 | Not started | - |
-| 2. Source Intake and Normalization | 0/3 | Not started | - |
-| 3. Core Message and Clarifying Questions | 0/2 | Not started | - |
-| 4. Draft Generation with Source Rules | 0/3 | Not started | - |
-| 5. Personal Memory and Rewrite Loop | 0/2 | Not started | - |
+| 1. Product Shell and Writer Profile | 2/2 | Complete | 2026-03-30 |
+| 2. Source Intake and Normalization | 3/3 | Complete | 2026-03-30 |
+| 3. Core Message and Clarifying Questions | 2/2 | Complete | 2026-03-30 |
+| 4. Draft Generation with Source Rules | 3/3 | Complete | 2026-03-30 |
+| 5. Personal Memory and Rewrite Loop | 2/2 | Complete | 2026-03-30 |

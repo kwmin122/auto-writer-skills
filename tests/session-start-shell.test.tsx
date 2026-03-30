@@ -12,7 +12,8 @@ describe("SessionStartShell", () => {
           defaultOutput: "blog",
           defaultTone: "professional",
           bannedMarkers: ["**", "emoji"],
-          writingNotes: "Prefer clear transitions."
+          writingNotes: "Prefer clear transitions.",
+          editPreferences: ["Prefer shorter drafts."]
         }}
       />
     );
@@ -21,8 +22,9 @@ describe("SessionStartShell", () => {
     expect(screen.getByText(/default tone/i)).toBeInTheDocument();
     expect(screen.getByText(/default output/i)).toBeInTheDocument();
     expect(screen.getByText(/short note/i)).toBeInTheDocument();
-    expect(screen.getByText(/YouTube/i)).toBeInTheDocument();
-    expect(screen.getByText(/GitHub/i)).toBeInTheDocument();
-    expect(screen.getByText(/paper/i)).toBeInTheDocument();
+    expect(screen.getByText(/^YouTube$/i)).toBeInTheDocument();
+    expect(screen.getByText(/^GitHub$/i)).toBeInTheDocument();
+    expect(screen.getByText(/^Paper$/i)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /organize material/i })).toBeInTheDocument();
   });
 });
