@@ -40,6 +40,21 @@
 - **INTG-02**: User can generate multiple output formats from the same source set in one action
 - **INTG-03**: User can call the writing flow from an external skill or command with links only
 
+### Distribution
+
+- **DIST-01**: User can install the system with a single CLI entrypoint such as `npx auto-writer-skills@latest`
+- **DIST-02**: Installer lets the user choose one or more target runtimes during setup
+- **DIST-03**: Installer supports both global and local installation scopes
+- **DIST-04**: Installer provides dry-run output and a post-install verification command for each selected runtime
+
+### Runtime Support
+
+- **RT-01**: Codex runtime can receive the system through a runtime adapter that emits Codex-compatible skill artifacts
+- **RT-02**: Claude Code runtime can receive the system through a runtime adapter that emits Claude-compatible artifacts
+- **RT-03**: Cursor runtime can receive the system through a runtime adapter
+- **RT-04**: Antigravity runtime can receive the system through a runtime adapter
+- **RT-05**: Shared writing rules are defined once in a common core and reused across all runtime adapters
+
 ### Personal Agent
 
 - **AGNT-01**: System maintains a richer long-term voice profile across sessions
@@ -74,6 +89,16 @@
 | OUTP-05 | Phase 4 | Complete |
 | PERS-02 | Phase 5 | Complete |
 | PERS-03 | Phase 5 | Complete |
+| DIST-01 | Phase 7 | Planned |
+| DIST-02 | Phase 7 | Planned |
+| DIST-03 | Phase 7 | Planned |
+| DIST-04 | Phase 10 | Planned |
+| RT-05 | Phase 6 | Planned |
+| RT-01 | Phase 8 | Planned |
+| RT-02 | Phase 8 | Planned |
+| RT-03 | Phase 9 | Planned |
+| RT-04 | Phase 9 | Planned |
+| INTG-03 | Phase 10 | Planned |
 
 **Coverage:**
 - v1 requirements: 15 total
@@ -82,4 +107,4 @@
 
 ---
 *Requirements defined: 2026-03-30*
-*Last updated: 2026-03-30 after v1 execution and verification*
+*Last updated: 2026-03-31 after installer-milestone design*

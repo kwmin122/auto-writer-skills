@@ -4,11 +4,13 @@
 
 이 제품은 1인 개발자이자 지식 노동자인 사용자가 평소 남기는 메모, 초안, URL, 유튜브 링크, GitHub 링크, 논문 링크를 글 재료로 모아 LinkedIn 글이나 블로그 글로 다시 써주는 개인 글쓰기 에이전트다.
 
+배포 형태는 점점 더 중요해졌다. 사용자는 웹사이트에 들어와 쓰는 것보다, Claude Code, Codex, Cursor, Antigravity 같은 자신이 쓰는 AI 런타임에 이 시스템을 바로 설치해서 쓰길 원한다.
+
 핵심은 요약이 아니라 재구성이다. 시스템은 먼저 핵심 메시지를 정리하고, 부족한 정보를 짧게 질문한 뒤, 사용자의 톤과 수정 습관을 반영해 점점 더 사용자다운 문체로 글을 완성한다.
 
 ## Core Value
 
-링크 몇 개와 짧은 메모만으로도 출처가 남고 사용자다운 플랫폼 맞춤 글을 빠르게 완성한다.
+링크 몇 개와 짧은 메모만으로도 출처가 남고 사용자다운 플랫폼 맞춤 글을 빠르게 완성하고, 이를 한 줄 설치로 내 런타임에 붙여 바로 쓸 수 있게 한다.
 
 ## Requirements
 
@@ -23,6 +25,10 @@
 
 ### Active
 
+- [ ] 사용자는 단일 CLI 설치기로 이 시스템을 내려받고 설치할 수 있다
+- [ ] 사용자는 설치 중 Claude Code, Codex, Cursor, Antigravity 중 원하는 런타임을 고를 수 있다
+- [ ] 사용자는 global 또는 local 설치를 선택할 수 있다
+- [ ] 공통 글쓰기 시스템은 하나의 core에서 관리되고 런타임별 차이는 adapter가 처리한다
 - [ ] 라이브 모델 제공자를 연결해 휴리스틱 초안 대신 실제 생성 모델 기반 작성으로 확장한다
 - [ ] 외부 스킬 호출로 링크만 보내도 개인화된 글을 생성하는 진입점을 추가한다
 
@@ -45,6 +51,8 @@
 
 문체 규칙도 분명하다. 생성된 글은 AI가 쓴 티가 나지 않아야 하고, 마크다운 강조 기호나 이모티콘을 남발하지 않아야 하며, 실제 사람이 쓴 것처럼 자연스럽고 담백해야 한다.
 
+이제 제품 성공 조건에는 설치 경험도 포함된다. GSD처럼 한 줄 설치 명령으로 시작하고, 설치 중 런타임과 범위를 고른 뒤 바로 쓸 수 있어야 한다.
+
 ## Constraints
 
 - **Product scope**: 빠르게 만들 수 있는 구조로 시작 — 과한 멀티 에이전트 구조나 복잡한 지식 그래프는 초기 범위에서 제외
@@ -52,6 +60,7 @@
 - **Writing style**: 생성 결과에 마크다운 강조 기호, 이모티콘, 과한 AI식 문구를 사용하지 않음 — 사람처럼 자연스럽게 읽혀야 함
 - **Personalization**: 개인화는 Writer Profile과 Edit Memory 중심으로 시작 — 별도 모델 학습 없이도 작동해야 함
 - **UX friction**: 입력 장벽이 낮아야 함 — 사용자는 정리된 입력보다 지저분한 메모와 링크를 그대로 넣을 가능성이 높음
+- **Distribution**: 설치 경험은 단일 CLI 진입점이어야 함 — 클라이언트별 패키지를 따로 찾게 만들지 않음
 
 ## Key Decisions
 
@@ -62,6 +71,7 @@
 | 결과물에는 항상 출처를 남긴다 | 링크와 외부 자료 기반 글쓰기는 신뢰와 추적 가능성이 중요하다 | Completed with required source lines in generated draft |
 | 생성 결과는 사람처럼 자연스럽게 쓰고, 이모티콘과 마크다운 강조를 금지한다 | 사용자는 AI 티 나는 결과를 원하지 않는다 | Completed with output guardrails and banned marker stripping |
 | 질문 수는 최소화하고 필요한 경우에만 2-4개 수준으로 제한한다 | 질문이 많아지면 글쓰기 도구가 아니라 설문 흐름이 된다 | Completed with targeted follow-up question policy |
+| 배포는 단일 CLI 설치기 중심으로 간다 | 사용자는 웹앱보다 자신의 AI 런타임에 바로 붙여 쓰는 경험을 원한다 | Approved for next milestone |
 
 ## Evolution
 
@@ -81,4 +91,4 @@ After each milestone:
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-30 after v1 execution and verification*
+*Last updated: 2026-03-31 after installer-milestone design*

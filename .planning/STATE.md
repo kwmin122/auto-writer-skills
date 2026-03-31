@@ -2,19 +2,19 @@
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-03-30)
+See: .planning/PROJECT.md (updated 2026-03-31)
 
 **Core value:** 링크 몇 개와 짧은 메모만으로도 출처가 남고 사용자다운 플랫폼 맞춤 글을 빠르게 완성한다.
-**Current focus:** v1 complete - ready for next milestone planning
+**Current focus:** installer-first milestone design complete - ready for Phase 6 planning
 
 ## Current Position
 
-Phase: 5 of 5 (Personal Memory and Rewrite Loop)
-Plan: All roadmap plans completed
-Status: Complete and verified
-Last activity: 2026-03-30 — Phases 2-5 implemented, verified, and ready to ship
+Phase: 6 of 10 (Shared Core Extraction)
+Plan: 0 of 2 in current phase
+Status: Ready to plan
+Last activity: 2026-03-31 — installer-first milestone designed and implementation plan written
 
-Progress: [██████████] 100%
+Progress: [█████░░░░░] 50%
 
 ## Performance Metrics
 
@@ -53,15 +53,18 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-- Optional live model provider integration
-- External skill trigger entrypoint for link-only invocation
+- Shared core extraction from app-only modules
+- Single CLI installer shell
+- Runtime adapters for Claude Code, Codex, Cursor, Antigravity
+- Link-only runtime invocation entrypoint
 
 ### Blockers/Concerns
 
-- The current draft path is heuristic. Real model-backed generation is the next milestone if higher-quality prose becomes necessary.
+- Installer design is approved, but runtime-specific target paths still need adapter-level verification during implementation.
+- The current draft path is heuristic. Real model-backed generation stays after the installer milestone unless quality demands escalation.
 
 ## Session Continuity
 
-Last session: 2026-03-30 08:14 KST
-Stopped at: v1 execution verified, roadmap closed, ready for commit and next milestone definition
+Last session: 2026-03-31 10:00 KST
+Stopped at: installer-first milestone documented and ready for Phase 6 planning
 Resume file: None
