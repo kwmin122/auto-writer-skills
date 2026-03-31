@@ -9,13 +9,13 @@ The installer sets up runtime-specific rules or skills so you can send rough not
 Run the installer with `npx`:
 
 ```bash
-npx auto-writer-skills@latest
+npx @minco/auto-writer-skills@latest
 ```
 
 You can also skip prompts:
 
 ```bash
-npx auto-writer-skills@latest --runtime codex,claude-code --local
+npx @minco/auto-writer-skills@latest --runtime codex,claude-code --local
 ```
 
 Available flags:

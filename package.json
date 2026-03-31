@@ -1,5 +1,5 @@
 {
-  "name": "auto-writer-skills",
+  "name": "@minco/auto-writer-skills",
   "version": "0.1.0",
   "description": "Single-command installer for source-aware writing skills across coding agents.",
   "bin": {
