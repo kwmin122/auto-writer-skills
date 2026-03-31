@@ -45,4 +45,15 @@ describe("resolveInstallPlan", () => {
     expect(globalPlan.entries[0]?.targetDir).toBe(path.join(homeDir, ".gemini"));
     expect(globalPlan.entries[0]?.verifyCommand).toContain("AGENTS.md");
   });
+
+  it("rejects unsupported global Cursor installs", () => {
+    expect(() =>
+      resolveInstallPlan({
+        runtimes: ["cursor"],
+        scope: "global",
+        cwd: "/tmp/project",
+        homeDir: "/tmp/home"
+      })
+    ).toThrow(/Cursor global rules live in Cursor settings/);
+  });
 });

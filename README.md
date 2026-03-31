@@ -38,7 +38,7 @@ Available flags:
   - global: `~/.claude/skills/auto-writer-skills/SKILL.md`
 - Cursor
   - local: `.cursor/rules/auto-writer-skills.mdc`
-  - global: `~/.cursor/rules/auto-writer-skills.mdc`
+  - global: not supported by file install, because Cursor user rules live in settings
 - Antigravity
   - local: `.agent/rules/auto-writer-skills.md`
   - global: `~/.gemini/AGENTS.md`

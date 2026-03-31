@@ -6,10 +6,15 @@ import type { ResolveInstallPlanInput, RuntimeManifest } from "../../installer/t
 export function resolveCursorTargetDir({
   scope,
   cwd = process.cwd(),
-  homeDir = process.env.HOME ?? "",
   targetRoot
 }: ResolveInstallPlanInput) {
-  const baseDir = targetRoot ?? (scope === "global" ? homeDir : cwd);
+  if (scope === "global") {
+    throw new Error(
+      "Cursor global rules live in Cursor settings and are not file-installable. Use --local instead."
+    );
+  }
+
+  const baseDir = targetRoot ?? cwd;
   return path.join(baseDir, ".cursor", "rules");
 }
 
