@@ -1,13 +1,26 @@
 {
   "name": "auto-writer-skills",
   "version": "0.1.0",
-  "private": true,
+  "description": "Single-command installer for source-aware writing skills across coding agents.",
+  "bin": {
+    "auto-writer-skills": "./bin/auto-writer-skills.js"
+  },
+  "files": [
+    "README.md",
+    "bin",
+    "dist-installer"
+  ],
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run build:installer && next build",
+    "build:installer": "tsc -p tsconfig.installer.json",
     "lint": "eslint .",
+    "prepack": "npm run build:installer",
     "test": "node scripts/run-vitest.mjs",
     "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18.18"
   },
   "dependencies": {
     "next": "^15.0.0",

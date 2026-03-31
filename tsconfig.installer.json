@@ -1,0 +1,24 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "./dist-installer",
+    "rootDir": "./src",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "isolatedModules": false,
+    "incremental": false,
+    "types": ["node"]
+  },
+  "include": [
+    "src/installer/**/*.ts",
+    "src/adapters/**/*.ts",
+    "src/core/runtime-manifest.ts",
+    "src/lib/writer-profile-schema.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "tests"
+  ]
+}
